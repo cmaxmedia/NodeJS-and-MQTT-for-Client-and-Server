@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="/css/page.css" type="text/css" />
+<script src="/js/socket.io.js"></script>
+<script src="/js/jquery-1.11.1.js"></script>
+<script>
+	var socket = io();
+  var stopped = false;
+  
+	socket.on( 'CMAXMEDIA/MQTTSERVER/STATUS', function( data ) {
+		$("#CMAXMEDIA_MQTTSERVER_STATUS").html( data );
+	});
+	
+	function sendUpdate( state ) {
+		socket.emit( "SOCKETUPDATE", state );
+    stopped = state;
+	}
+	
+</script>
+<div id="CMAXMEDIA_MQTTSERVER_STATUS">xxx</div>
+
+<button onclick="sendUpdate(true)">Stop Update</button>
+<button onclick="sendUpdate(false)">Start Update</button>
+
