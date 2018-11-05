@@ -1,0 +1,12 @@
+[Unit]
+Description=NodeJS Port 8000
+After=multi-user.target
+
+[Service]
+WorkingDirectory=/home/pi/nodejs
+ExecStart=/usr/bin/node  /home/pi/nodejs/node.js > /home/pi/nodejs/node.js.log 2>&1
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
