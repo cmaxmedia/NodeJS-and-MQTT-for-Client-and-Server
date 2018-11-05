@@ -10,3 +10,15 @@ RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
+
+
+# 1) Create the file: nano /lib/systemd/system/nodejs.service
+# 2) Enter content and save it
+# 3) make it executable: sudo chmod 644 /lib/systemd/system/nodejs.service
+# 4) reload daemon: sudo systemctl daemon-reload
+# 5) enable the new service: sudo systemctl enable nodejs.service
+
+# you can control state with
+# - status of the service: sudo systemctl status nodejs.service
+# - stop the service: sudo systemctl stop nodejs.service
+# - start the service: sudo systemctl start nodejs.service
