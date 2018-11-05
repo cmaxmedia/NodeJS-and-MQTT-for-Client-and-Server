@@ -4,7 +4,7 @@
 <script src="/js/jquery-1.11.1.js"></script>
 <script>
 	var socket = io();
-  var stopped = false;
+  	var stopped = false;
   
 	socket.on( 'CMAXMEDIA/MQTTSERVER/STATUS', function( data ) {
 		$("#CMAXMEDIA_MQTTSERVER_STATUS").html( data );
@@ -12,7 +12,7 @@
 	
 	function sendUpdate( state ) {
 		socket.emit( "SOCKETUPDATE", state );
-    stopped = state;
+    		stopped = state;
 	}
 	
 </script>
