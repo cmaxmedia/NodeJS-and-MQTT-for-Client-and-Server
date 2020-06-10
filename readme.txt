@@ -3,8 +3,10 @@ npm install mqtt
 
 mkdir /home/pi/nodejs
 mkdir /home/pi/nodejs/public
+
 nano /home/pi/nodejs/public/index.html
 nano /home/pi/nodejs/node.js
+nano /lib/systemd/system/nodejs.service
 
 nodejs /home/pi/nodejs/node.js
 
